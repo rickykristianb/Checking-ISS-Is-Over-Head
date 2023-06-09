@@ -2,11 +2,15 @@ import requests
 from datetime import datetime
 import smtplib
 import time
+import os
+from dotenv import load_env
+
+load_env()
 
 MY_LAT = 30.4189  # Your latitude
 MY_LONG = 4.2338  # Your longitude
-MY_EMAIL = "learnpythn@gmail.com"
-PASSWORD = "yfhazrrcqelsqraa"
+MY_EMAIL = os.getenv('MY_EMAIL')
+PASSWORD = os.getenv('PASSWORD')
 my_position = MY_LAT + MY_LONG
 
 
